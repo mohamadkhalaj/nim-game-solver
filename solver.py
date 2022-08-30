@@ -1,7 +1,11 @@
 from functools import reduce
 
+print("Enter stacks seperated by space.")
+print("Example: 1 3 5 7")
+print("Solves the game with above input.\n")
+
 while True:
-    stack = input().split()
+    stack = input("Enter stacks: ").split()
     if not stack:
         print('Finished!')
         break
@@ -13,4 +17,4 @@ while True:
     min_value = min(min_stack)
     min_index = min_stack.index(min_value)
     to_drop_items = (int_stack[min_index] - min_value) or 1
-    print(f"Remove {to_drop_items} items from stack {min_index+1}")
+    print(f"Remove {to_drop_items} item(s) from stack {min_index+1}")
